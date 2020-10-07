@@ -1,4 +1,4 @@
-filePath='D:/Python/TrainData/Pretrained GPU darknet/darknet-test/data/obj'
+filePath='file path folder'
 targetName='dog'
 fileType='.jpg'
 from os import rename, listdir
