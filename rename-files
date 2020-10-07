@@ -1,0 +1,17 @@
+filePath='D:/Python/TrainData/Pretrained GPU darknet/darknet-test/data/obj'
+targetName='dog'
+fileType='.jpg'
+from os import rename, listdir
+from os.path import isfile, join
+fileList = [f for f in listdir(filePath) if isfile(join(filePath, f))]
+
+count=0
+for f in fileList:
+	if fileType not in str(f):
+		continue
+	currentName = join(filePath,f)
+	newName = join(filePath,targetName+str(count)+'.'+f.split('.')[1])
+	count+=1
+	print(currentName)
+	rename(r''+currentName,r''+newName)
+	
